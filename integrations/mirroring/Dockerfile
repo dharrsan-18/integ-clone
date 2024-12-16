@@ -59,7 +59,7 @@ ARG SURICATA_VERSION
 RUN curl -LO https://www.openinfosecfoundation.org/download/suricata-${SURICATA_VERSION}.tar.gz && \
     tar xzvf suricata-${SURICATA_VERSION}.tar.gz && \
     cd suricata-${SURICATA_VERSION} && \
-    ./configure --enable-lua && \
+    ./configure --enable-lua --enable-debug && \
     make && \
     make install && \
     cd .. && \
